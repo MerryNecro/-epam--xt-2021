@@ -10,7 +10,7 @@ namespace _1._1._3
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++) {
                 String str = "";
-                for (int j = 0; j < 10 - i; j++)
+                for (int j = 0; j < n- 1 - i; j++)
                 {
                     str += " ";
                 }
