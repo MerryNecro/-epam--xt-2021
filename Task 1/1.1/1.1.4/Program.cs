@@ -6,6 +6,11 @@ namespace _1._1._4
     {
         static void Main(string[] args)
         {
+            Xmas_Tree();
+        }
+
+        static void Xmas_Tree()
+        {
             Console.WriteLine("Введите N: ");
             int n = int.Parse(Console.ReadLine());
             for (int m = 1; m <= n; m++)

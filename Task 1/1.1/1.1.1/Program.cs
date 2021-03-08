@@ -6,12 +6,17 @@ namespace _1._1._1
     {
         static void Main(string[] args)
         {
+            Rectangle();
+        }
+
+        static void Rectangle()
+        {
             Console.WriteLine("Введите длину первой стороны: ");
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите длину второй стороны: ");
             int b = int.Parse(Console.ReadLine());
             if (a <= 0 || b <= 0) { Console.WriteLine("Неверное значение одной из сторон"); }
-            else { Console.WriteLine("Площадь прямоугольника равна: " + a*b); }
+            else { Console.WriteLine("Площадь прямоугольника равна: " + a * b); }
         }
     }
 }

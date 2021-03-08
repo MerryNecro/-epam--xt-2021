@@ -7,8 +7,13 @@ namespace _1._1._5
     {
         static void Main(string[] args)
         {
+            SumOfNumber();
+        }
+
+        static void SumOfNumber()
+        {
             int sum = 0;
-            for(int i = 0; i< 1000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 if (i % 3 == 0 || i % 5 == 0)
                 {
