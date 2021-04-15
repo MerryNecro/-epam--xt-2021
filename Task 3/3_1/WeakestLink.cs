@@ -9,7 +9,7 @@ namespace _3_1
 {
     class WeakestLink
     {
-        private CycledDynamicArray<int> Humans;
+        private DynamicArray<int> Humans;
 
         private int N;
         private int NumberOfHumanToDelete;
@@ -17,19 +17,49 @@ namespace _3_1
         public WeakestLink() {
             N = GetN();
             NumberOfHumanToDelete = GetNumberOfHumanToDelete();
-            Humans = new CycledDynamicArray<int>(N);
+            Humans = new DynamicArray<int>(N);
+
             for(int i = 0; i < N; i++)
             {
-                
+                Humans.Add(1);
             }
+
             Kick();
         }
 
 
         private void Kick() 
         {
+            int TempCounter = 0;
+            int Current = 0;
+            int StageCounter = 1;
 
+            while (true)
+            {
+                TempCounter++;
+                
+                if(TempCounter == NumberOfHumanToDelete)
+                {
+                    Humans.Remove(Humans[Current]);
+                    Console.WriteLine("Раунд " + StageCounter + ". Вычеркнут человек. Людей осталось: " + Humans.Length);
+                    StageCounter++;
 
+                    if (NumberOfHumanToDelete > Humans.Length)
+                    {
+                        Console.WriteLine("Игра окончена. Невозможно вычеркнуть больше людей.");
+                        break;
+                    }
+
+                    TempCounter = 1;
+                }
+
+                if(Current == Humans.Length - 1)
+                {
+                    Current = 0;
+                }
+
+                Current++;
+            }
         }
 
 
